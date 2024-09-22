@@ -26,3 +26,13 @@ func TestAdd(t *testing.T) {
 		t.Errorf("Expected: %d, but got: %d", expected, result)
 	}
 }
+
+func TestAddNegative(t *testing.T) {
+	result := Add(-1, -2)
+	expected := -1
+
+	if result != expected {
+		t.Fail()
+		t.Logf("Expected: %d, but got: %d", expected, result)
+	}
+}
